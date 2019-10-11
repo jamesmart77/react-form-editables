@@ -1,0 +1,46 @@
+{
+  "name": "react-form-editables",
+  "version": "0.0.7",
+  "description": "A React component that easily allows inline editing.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "React",
+    "react",
+    "form",
+    "input",
+    "edit",
+    "editable",
+    "component"
+  ],
+  "author": "James Martineau",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "path": "^0.12.7",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-inlinesvg": "^1.1.7",
+    "style-loader": "^1.0.0",
+    "svg-inline-loader": "^0.8.0",
+    "svgo-loader": "^2.2.1",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
