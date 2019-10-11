@@ -16,10 +16,15 @@ import './App.css';
 import { EditableInput } from 'react-form-editables';
 
 class App extends Component {
+    state = {
+        textInputValue: "I am the original value",
+    }
 
-    handleSubmit = (event, updateValue) => {
+    handleSubmit = (event, updatedValue) => {
         event.preventDefault();
-        console.log("Updated value: ", updateValue);
+        console.log("Updated value: ", updatedValue);
+        
+        this.setState({ textInputValue: updatedValue })
     };
 
     render() {
@@ -35,7 +40,7 @@ class App extends Component {
                 
                 <EditableInput 
                     minInputLength={2}
-                    value="Input Value"
+                    value={this.state.textInputValue}
                     handleSubmit={this.handleSubmit}
                 />
                 

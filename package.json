@@ -1,6 +1,6 @@
 {
   "name": "react-form-editables",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A React component that easily allows inline editing.",
   "main": "./lib/index.js",
   "scripts": {
