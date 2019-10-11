@@ -1,6 +1,6 @@
 {
   "name": "react-form-editables",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A React component that easily allows inline editing.",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,7 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "tbd"
+    "url": "https://github.com/jamesmart77/react-form-editables"
+  },
+  "bugs": { 
+    "url" : "https://github.com/jamesmart77/react-form-editables/issues", 
+    "email" : "jamesmart77@gmail.com"
   },
   "keywords": [
     "React",
