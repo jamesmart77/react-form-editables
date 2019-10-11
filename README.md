@@ -10,41 +10,41 @@ Currently supporting Editable Inputs. Simply hover over the component, if enable
 
 ### CRA Example
 ```jsx
-    import React, { Component } from 'react';
-    import logo from './logo.svg';
-    import './App.css';
-    import { EditableInput } from 'react-form-editables';
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { EditableInput } from 'react-form-editables';
 
-    class App extends Component {
+class App extends Component {
 
-        handleSubmit = (event, updateValue) => {
-            event.preventDefault();
-            console.log("Updated value: ", updateValue);
-        };
+    handleSubmit = (event, updateValue) => {
+        event.preventDefault();
+        console.log("Updated value: ", updateValue);
+    };
 
-        render() {
-            return (
-                <div className="App">
-                    <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
-                    </header>
-                    <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    
-                    <EditableInput 
-                        minInputLength={2}
-                        value="Input Value"
-                        handleSubmit={this.handleSubmit}
-                    />
-                    
-                </div>
-            );
-        }
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h1 className="App-title">Welcome to React</h1>
+                </header>
+                <p className="App-intro">
+                To get started, edit <code>src/App.js</code> and save to reload.
+                </p>
+                
+                <EditableInput 
+                    minInputLength={2}
+                    value="Input Value"
+                    handleSubmit={this.handleSubmit}
+                />
+                
+            </div>
+        );
     }
+}
 
-    export default App;
+export default App;
 ```
 
 ### Compoent Props
