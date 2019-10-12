@@ -10,6 +10,7 @@ class EditableInput extends Component {
     super(props);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleEditToggle = this.handleEditToggle.bind(this);
+    this.handleComplete = this.handleComplete.bind(this);
     this.state = {
       inputTitle: '',
       isEditable: false,
@@ -24,20 +25,32 @@ class EditableInput extends Component {
     });
   };
 
-  handleEditToggle() {
+  async handleEditToggle() {
     const { isEditable } = this.state;
 
-    this.setState({
+    await this.setState({
       isEditable: !isEditable,
       inputTitle: '',
     });
   };
+
+  async handleComplete(event){
+    event.preventDefault();
+    const { handleSubmit } = this.props;
+    const { inputTitle } = this.state;
+
+    await this.setState({
+      isEditable: false,
+      inputTitle: '',
+    });
+
+    handleSubmit(inputTitle);
+  }
   
   render () {
     let {
       minInputLength,
       value,
-      handleSubmit,
     } = this.props;
 
     const { inputTitle, isEditable } = this.state;
@@ -55,19 +68,20 @@ class EditableInput extends Component {
               className='editable-form'
               onReset={this.handleEditToggle}
               onChange={this.handleInputChange}
-              onSubmit={(e) => handleSubmit(e, inputTitle)}>
-              
+              onSubmit={this.handleComplete}
+            >
               <div className='editable-input-wrapper'>
                 <input
                   type='text'
                   className='input-title'
                   defaultValue={inputTitle}
-                  name='inputTitle'/>
+                  name='inputTitle'
+                />
               </div>
               <div className='editable-action'>
                 <button
                   className='send-btn'
-                  type='submit'
+                  type='submit'               
                   disabled={shouldDisable}>
                   <SVG src={checkMark} className="send-icon" alt="checkmark-circle" />
                 </button>

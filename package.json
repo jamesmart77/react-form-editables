@@ -1,12 +1,13 @@
 {
   "name": "react-form-editables",
-  "version": "1.0.2",
-  "description": "A React component that easily allows inline editing.",
+  "version": "1.1.0",
+  "description": "A React component that easily allows the editing of DOM elements in a single click.",
   "main": "./lib/index.js",
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^16.10.2",
@@ -25,6 +26,7 @@
     "react",
     "form",
     "input",
+    "elements",
     "edit",
     "editable",
     "component"

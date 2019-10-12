@@ -20,8 +20,7 @@ class App extends Component {
         textInputValue: "I am the original value",
     }
 
-    handleSubmit = (event, updatedValue) => {
-        event.preventDefault();
+    handleSubmit = (updatedValue) => {
         console.log("Updated value: ", updatedValue);
         
         this.setState({ textInputValue: updatedValue })
